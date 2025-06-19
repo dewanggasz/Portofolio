@@ -109,62 +109,62 @@ spatie/browsershot (untuk membuat gambar dari HTML)
 Berikut adalah langkah-langkah untuk menjalankan proyek ini di lingkungan lokal Anda.
 
 Clone Repositori
-
+```bash
 git clone [URL_REPOSITORY_ANDA]
 cd nama-folder-proyek
-
+```
 Instal Dependensi
-
+```bash
 composer install
 npm install
-
+```
 Konfigurasi Lingkungan
 
-Salin file .env.example menjadi .env.
+Salin file ```.env.example``` menjadi ```.env.```
 
-cp .env.example .env
+```cp .env.example .env```
 
 Buat kunci aplikasi baru.
 
-php artisan key:generate
+```php artisan key:generate```
 
-Buka file .env dan atur koneksi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+Buka file ```.env``` dan atur koneksi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
-Tambahkan API Key Anda dari Google AI Studio ke dalam .env.
+Tambahkan API Key Anda dari Google AI Studio ke dalam ```.env.```
 
-GEMINI_API_KEY=KUNCI_API_GEMINI_ANDA
+```GEMINI_API_KEY=KUNCI_API_GEMINI_ANDA```
 
 Jalankan Migrasi Database
 Perintah ini akan membuat semua tabel yang dibutuhkan di database Anda.
 
-php artisan migrate
+`php artisan migrate`
 
 Buat Storage Link
 Perintah ini wajib dijalankan untuk memastikan file yang diunggah (seperti gambar chat) dapat diakses dari web.
 
-php artisan storage:link
+`php artisan storage:link`
 
 Buat Akun Admin Pertama
 Jalankan perintah Filament ini dan ikuti petunjuknya.
 
-php artisan make:filament-user
+`php artisan make:filament-user`
 
-Penting: Setelah membuat user, kita perlu memberinya peran 'admin'. Jalankan php artisan tinker, lalu:
-
+Penting: Setelah membuat user, kita perlu memberinya peran 'admin'. Jalankan `php artisan tinker`, lalu:
+```bash
 $user = App\Models\User::where('email', 'emailadmin@anda.com')->first();
 $user->role = 'admin';
 $user->save();
 exit;
-
+```
 Jalankan Aplikasi
 
 Kompilasi aset frontend.
 
-npm run dev
+```npm run dev```
 
 Jalankan server development.
 
-php artisan serve
+`php artisan serve`
 
 Aplikasi Anda sekarang akan berjalan di http://127.0.0.1:8000. Anda bisa mengakses Panel Admin melalui alamat URL yang telah Anda tentukan di app/Providers/Filament/AdminPanelProvider.php.
 
