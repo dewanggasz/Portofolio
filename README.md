@@ -1,4 +1,4 @@
-ArenaLatih: Platform Latihan Soal Cerdas
+###ArenaLatih: Platform Latihan Soal Cerdas
 Selamat datang di ArenaLatih, sebuah platform web modern yang dirancang untuk menjadi pusat latihan soal yang fleksibel, interaktif, dan cerdas. Dibangun dengan Laravel dan Filament, platform ini tidak hanya berfungsi sebagai alat untuk mengerjakan ujian, tetapi juga sebagai partner belajar yang adaptif.
 
 Proyek ini merupakan hasil kolaborasi intensif yang menggabungkan visi desain yang kuat dengan implementasi teknis yang canggih, mencakup integrasi AI, sistem penilaian dinamis, dan pengalaman pengguna yang premium.
